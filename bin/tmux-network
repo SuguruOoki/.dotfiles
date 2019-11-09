@@ -1,0 +1,70 @@
+#!/bin/bash
+
+. "$DOTPATH"/etc/lib/util.zsh
+
+if is_cygwin; then
+    wlan_status=`netsh wlan show interfaces`
+
+    if echo "$wlan_status" | grep -vq 'not running'; then
+        IFS=$'\r\n'
+        network_info=($(echo "$wlan_status" | grep -E "^\s*(State|SSID|Signal)" | awk -F ': ' '{print $2}'))
+
+        state=${network_info[0]}
+        ssid=${network_info[1]}
+        signal=${network_info[2]}
+
+        case "${state}" in
+            "connected")
+                signals=(▁ ▃ ▄ ▆ █)
+                signal_icon=""
+                if has bc; then
+                    signal_=`echo "scale=1; ${signal%\%*} / 100.0 * 5 + 1" | bc`
+
+                    for ((i=0; i < ${signal_%.*}; i++ )); do
+                        signal_icon="${signal_icon}${signals[$i]}"
+                    done
+                else
+                    signal_icon="?"
+                fi
+                network_status="#[bg=colour033,fg=black] ${signal_icon} (${ssid}) #[bg=default,fg=default]"
+                ;;
+            "disconnected")
+                network_status="#[bg=colour033,fg=red] ✘ #[default] #[bg=colour027,fg=white] DISCONNECTED #[bg=default,fg=default]"
+                ;;
+            *)
+                network_status="#[bg=colour033,fg=yellow] ... #[default]"
+                ;;
+        esac
+    fi
+
+    echo "${network_status}"
+elif is_osx; then
+    airport_path="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+
+    IFS=$'\n'
+    if air_info=($(eval "$airport_path" -I | grep -E "^ *(agrCtlRSSI|state|SSID):" | awk -F ': ' '{print $2}')); then
+
+        state=${air_info[1]}
+        ssid=${air_info[2]}
+        rssi=${air_info[0]}
+
+        case "$state" in
+            "running")
+                signals=(▁ ▂ ▄ ▆ █)
+                signal_icon=""
+                rssi_=$(expr 5 - ${rssi} / -20)
+                for ((i=0; i < $rssi_; i++ )); do
+                    signal_icon="${signal_icon}${signals[$i]}"
+                done
+                network_status="#[bg=colour033,fg=colour015] ${signal_icon} (${ssid}) #[bg=default,fg=default]"
+                ;;
+            "init")
+                network_status="#[bg=colour033,fg=yellow] ... #[default]"
+                ;;
+            *)
+                network_status="#[bg=colour033,fg=red] ✘ #[default] DISCONNECTED #[bg=default,fg=default]"
+                ;;
+        esac
+        echo "${network_status}"
+    fi
+fi

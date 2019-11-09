@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for code in {0..255}; do
+    printf "\x1b[38;5;${code}m %03d " $code
+    [ $((${code} % 16)) -eq 15 ] && echo
+done
+
+echo 
+
+for code in {0..255}; do
+    printf "\x1b[48;5;${code}m %03d " $code
+    [ $((${code} % 16)) -eq 15 ] && printf "\x1b[48;5;000m" && echo
+done
+

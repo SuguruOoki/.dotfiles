@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ -z $TMUX ]; then
+    echo 'Out of tmux!'
+    exit 1
+fi
+
+if [ $# = 0 ]; then
+    echo 'No args!'
+    exit 1
+fi
+
+echo ${1} | fold -s -1 | while IFS= read -r d; do
+    if [ ${d} = 'h' ]; then
+        tmux split-window -h
+    elif [ ${d} = 'H' ]; then
+        tmux last-pane && tmux split-window -h
+    elif [ ${d} = 'v' ]; then
+        tmux split-window -v
+    elif [ ${d} = 'V' ]; then
+        tmux last-pane && tmux split-window -v
+    fi
+done

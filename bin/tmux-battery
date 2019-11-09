@@ -1,0 +1,17 @@
+#!/bin/bash
+
+. "$DOTPATH"/etc/lib/util.zsh
+
+if is_osx; then
+    if battery_info=$(/usr/bin/pmset -g ps | awk '{if (NR == 2) print $0}') ; then
+        battery_quantity=$(echo $battery_info | awk -F ' ' '{print $3}' | sed -e 's/;//g' -e 's/%//')
+        if [[ ! $battery_info =~ "discharging" ]]; then
+            battery="#[bg=colour034,fg=colour015] ⚡ $battery_quantity% #[default]"
+        elif (( $battery_quantity <= 20 )); then
+            battery="#[bg=red,fg=colour015] $battery_quantity% #[default]"
+        else
+            battery="#[bg=colour027,fg=colour015] $battery_quantity% #[default]"
+        fi
+        echo $battery
+    fi
+fi
