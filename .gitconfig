@@ -1,0 +1,70 @@
+[push]
+    default = matching
+[core]
+    trustctime = false
+    editor = vim
+    filemode = false
+    autocrlf = input
+[color]
+    ui = true
+[color "diff"]
+    meta = white bold
+    old = 196
+    new = 046
+[color "status"]
+    changed = 046
+    added = 046
+    untracked = 196
+[credential]
+    helper = cache --timeout=3600
+[diff]
+    compactionHeuristic = true
+[merge]
+    tool = vimdiff
+[mergetool]
+    keeptemporaries = false
+    keepbackups = false
+    prompt = false
+    trustexitcode = false
+[alias]
+    last = log -1 --stat
+    cp = cherry-pick
+    co = checkout
+    cl = clone
+    ci = commit
+    st = status -sb
+    br = branch
+    unstage = reset HEAD --
+    dc = diff --cached
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    showpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
+[user]
+    name = s4kr4
+    email = s4kr4m4@gmail.com
+[tig]
+    main-view = id:width=8 date author commit-title:graph=yes,refs=yes
+    line-graphics = utf-8
+    tab-size = 4
+    ignore-space = at-eol
+    ignore-case = true
+    mouse = true
+    refresh-mode = auto
+[tig "bind"]
+    generic = g move-first-line
+    generic = G move-last-line
+    generic = <Ctrl-f> move-page-down
+    generic = <Ctrl-b> move-page-up
+    generic = E view-grep
+    status = + !git commit --amend
+    main = P !git push
+[tig "color"]
+    date = color081 default
+    cursor = white color022
+    graph-commit = color081 default
+    diff-stat = color081 default
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
