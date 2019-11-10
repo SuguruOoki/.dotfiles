@@ -32,7 +32,6 @@ augroup highlightSpace
   autocmd VimEnter,WinEnter * match IdeographicSpace /　\|\s\+$/
 augroup END
 
-colorscheme tender
 
 " Display cursorline
 highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
