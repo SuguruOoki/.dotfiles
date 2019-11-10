@@ -47,9 +47,9 @@ repo = 'sekel/vim-vue-syntastic'
 hook_add = 'source $XDG_VIM_HOME/plugins/vim-vue-syntastic.vim'
 
 [[plugins]]
-repo = 'tpope/vim-pathogen
+repo = 'tpope/vim-pathogen'
 hook_add = 'source $XDG_VIM_HOME/plugins/vim-pathogen.vim'
 
 [[plugins]]
-repo = 'tpope/vim-fugitive
+repo = 'tpope/vim-fugitive'
 hook_add = 'source $XDG_VIM_HOME/plugins/vim-pathogen.vim'
