@@ -44,3 +44,11 @@ repo = 'thinca/vim-quickrun'
 [[plugins]]
 repo = 'luochen1990/rainbow'
 hook_add = 'source $XDG_VIM_HOME/plugins/rainbow.vim'
+
+" [[plugins]]
+" repo = 'sekel/vim-vue-syntastic'
+" hook_add = 'source $XDG_VIM_HOME/plugins/vim-vue-syntastic.vim'
+
+" [[plugins]]
+" repo = 'tpope/vim-pathogen
+" hook_add = 'source $XDG_VIM_HOME/plugins/vim-pathogen.vim'
