@@ -21,9 +21,6 @@ hook_add = 'source $XDG_VIM_HOME/plugins/incsearch.vim'
 repo = 'haya14busa/incsearch-easymotion.vim'
 
 [[plugins]]
-repo = 'jacoborus/tender.vim'
-
-[[plugins]]
 repo = 'terryma/vim-multiple-cursors'
 hook_add = 'source $XDG_VIM_HOME/plugins/vim-multiple-cursors.vim'
 

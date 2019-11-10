@@ -72,8 +72,6 @@ hook_source = 'source $XDG_VIM_HOME/plugins/neosnippet.vim'
 repo     = 'prettier/vim-prettier'
 build    = 'npm install'
 on_ft    = ['javascript', 'typescript', 'vue', 'css', 'scss', 'json', 'markdown']
-hook_source = ''
-  let g:prettier#autoformat = 0
-  let g:prettier#quickfix_enabled = 0
-  autocmd BufWritePre *.js,*.ts,*.vue,*.css,*.scss,*.json,*.md PrettierAsync
-'''
+
+[[plugins]]
+repo     = 'junegunn/fzf.vim'
