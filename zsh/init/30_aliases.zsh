@@ -52,9 +52,9 @@ if has 'git'; then
     alias gc='git commit'
     alias gcm='git commit -m'
     alias gp='git push'
-    alias gs='git status'
+    alias gs='git switch'
     alias gd='git diff'
-    alias gco='git checkout'
+    alias gc='git checkout'
 fi
 
 if has 'vagrant'; then
