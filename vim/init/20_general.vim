@@ -33,7 +33,7 @@ set noundofile
 " Disable ring beep
 set vb t_vb=
 
-set whichwrap=b,s,h,l,<,>,[,]
+" set whichwrap=b,s,h,l,<,>,[,]
 
 set completeopt=menuone
 
