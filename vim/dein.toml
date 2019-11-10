@@ -42,10 +42,14 @@ repo = 'thinca/vim-quickrun'
 repo = 'luochen1990/rainbow'
 hook_add = 'source $XDG_VIM_HOME/plugins/rainbow.vim'
 
-" [[plugins]]
-" repo = 'sekel/vim-vue-syntastic'
-" hook_add = 'source $XDG_VIM_HOME/plugins/vim-vue-syntastic.vim'
+[[plugins]]
+repo = 'sekel/vim-vue-syntastic'
+hook_add = 'source $XDG_VIM_HOME/plugins/vim-vue-syntastic.vim'
 
-" [[plugins]]
-" repo = 'tpope/vim-pathogen
-" hook_add = 'source $XDG_VIM_HOME/plugins/vim-pathogen.vim'
+[[plugins]]
+repo = 'tpope/vim-pathogen
+hook_add = 'source $XDG_VIM_HOME/plugins/vim-pathogen.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive
+hook_add = 'source $XDG_VIM_HOME/plugins/vim-pathogen.vim'
