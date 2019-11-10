@@ -13,6 +13,9 @@ scriptencoding utf-8
 " Enable using mouse
 set mouse=a
 
+" Enable using clipboard
+set clipboard=unnamed
+
 " Enable settings depends on filetype
 filetype plugin indent on
 
