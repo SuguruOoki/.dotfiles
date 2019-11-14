@@ -51,10 +51,17 @@ if has 'git'; then
     alias gaa='git add -A'
     alias gc='git commit'
     alias gcm='git commit -m'
-    alias gp='git push'
+    alias gpu='git push'
     alias gs='git switch'
     alias gd='git diff'
-    alias gc='git checkout'
+fi
+
+if has 'docker-compose'; then
+    alias dcu='docker-compose up -d'
+    alias dcp='docker-compose ps'
+    alias dcr='docker-compose restart'
+    alias dcl='docker-compose logs'
+    alias dcrm='docker-compose rm'
 fi
 
 if has 'vagrant'; then
