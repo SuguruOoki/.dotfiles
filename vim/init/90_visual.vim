@@ -10,7 +10,7 @@ set cursorline
 
 " visible whitespace
 set list
-set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:%,eol:<
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 
 " display statusline
 set laststatus=2
