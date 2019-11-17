@@ -64,6 +64,11 @@ if has 'docker-compose'; then
     alias dcrm='docker-compose rm'
 fi
 
+if has 'hub'; then
+    alias hc='hub clone'
+    alias hb='hub browse'
+fi
+
 if has 'vagrant'; then
     alias vup='vagrant up'
     alias vsh='vagrant ssh'
