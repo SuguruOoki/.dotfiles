@@ -217,18 +217,18 @@ function peco-git-cd() {
 
 function alias-change() {
   local directory=`pwd`
-  vim ~/zshfiles/.zshrc;
-  source ~/zshfiles/.zshrc;
-  cd ~/zshfiles;
-  git add .zshrc;
+  vim ~/.dotfiles/zsh/init/31_zsh-old-aliases.zsh;
+  cd ~/.dotfiles;
+  git add .;
   git commit;
   git push origin master;
+  make install
   cd $directory;
 }
 
 function alias-local-change() {
-  vim ~/zshfiles/.zsh-local;
-  source ~/zshfiles/.zsh-local;
+  vim ~/.dotfiles/.zsh-local;
+  source ~/.dotfiles/.zsh-local;
 }
 
 function peco-select-history() {
