@@ -95,3 +95,10 @@ fga() {
   selected_files=$(echo "$modified_files" | fzf -m --preview 'git diff {}') &&
   git add $selected_files
 }
+
+laravel_refresh() {
+  composer dump-autoload
+  php artisan clear-compiled
+  php artisan optimize
+  php artisan config:cache
+}
