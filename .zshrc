@@ -28,3 +28,5 @@ fi
 if has tmux; then
     tmuxx
 fi
+
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
