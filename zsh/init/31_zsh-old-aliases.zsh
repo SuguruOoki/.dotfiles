@@ -793,8 +793,6 @@ alias wifi_list='networksetup -listpreferredwirelessnetworks en0'
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # gitで差分のあるファイルから一覧をとって実行するコマンド
-
-
 # alias givim = 'git status | grep modified | awk -F\':\' \'{print $2}\' | sed -e "s/ //g" | fzf |vim'
 alias gv=
 
