@@ -3,6 +3,7 @@
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 export LANG="en_US.UTF-8"
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.composer/vendor/bin
 
 if is_osx; then
     export PATH=$PATH:/usr/local/bin:/bin
