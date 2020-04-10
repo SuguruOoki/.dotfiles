@@ -102,3 +102,11 @@ laravel_refresh() {
   php artisan optimize
   php artisan config:cache
 }
+
+composer-uninstall () {
+  composer remove --no-update "$@"
+  composer update --dry-run |
+  grep -Eo -e '- Uninstalling\s+\S+' |
+  cut -d' ' -f3 |
+  xargs composer update
+}
