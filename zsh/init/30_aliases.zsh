@@ -3,17 +3,18 @@ alias crontab='crontab -i'
 
 case "${OSTYPE}" in
 darwin*)
-    alias ls='ls -G'
+    alias ls='exa -G'
     ;;
 *)
-    alias ls='ls --color=auto'
+    alias ls='exa --color=auto'
     ;;
 esac
 
-alias lr='ls -R'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias lr='exa -R'
+alias lt='exa -T'
+alias ll='exa -alF'
+alias la='exa -A'
+alias l='exa -CF'
 
 alias rm='rm -v'
 alias rr='rm -r'
