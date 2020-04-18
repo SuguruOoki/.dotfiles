@@ -51,7 +51,8 @@ alias pcdd="peco-docker-cd"
 alias pcd="peco-docker-compose-cd"
 alias dc="docker-compose"
 alias -g P='`docker ps | tail -n +2 | peco | cut -d" " -f1`'
-alias docker-ssh='docker exec -it P bash'
+alias docker-bash='docker exec -it P bash'
+alias docker-ash='docker exec -it P bash'
 alias ldup='docker-compose up -d nginx mysql phpmyadmin redis workspace'
 
 # diffツールを環境によって使い分ける
