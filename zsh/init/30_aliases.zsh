@@ -39,8 +39,9 @@ if has 'tmux'; then
 fi
 
 if has 'vim'; then
-    alias v='vim'
-    alias vi='vim'
+    alias v='nvim'
+    alias vi='nvim'
+    alias vim='nvim'
 fi
 
 if has 'nvim'; then

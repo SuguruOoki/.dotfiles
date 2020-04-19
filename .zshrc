@@ -30,3 +30,5 @@ if has tmux; then
 fi
 
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
