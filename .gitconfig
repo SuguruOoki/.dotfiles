@@ -3,3 +3,7 @@
 	email = oki.work0527@gmail.com
 [push]
     default = current
+[github]
+	user = SuguruOoki
+[credential]
+	helper = osxkeychain
