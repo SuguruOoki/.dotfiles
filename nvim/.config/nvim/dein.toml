@@ -1,0 +1,36 @@
+[[plugins]]
+repo = 'posva/vim-vue'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-vue.rc.vim
+'''
+
+[[plugins]]
+repo = 'prettier/vim-prettier'
+build = 'npm install'
+on_ft = ['javascript', 'typescript', 'vue', 'css', 'scss', 'json', 'markdown']
+hook_add = '''
+source ~/.config/nvim/plugins/vim-prettier.rc.vim
+'''
+
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+hook_add = '''
+source ~/.config/nvim/plugins/syntastic.rc.vim
+'''
+
+[[plugins]]
+repo = 'mtscout6/syntastic-local-eslint.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/syntastic-local-eslint.rc.vim
+'''
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+hook_add = '''
+source ~/.config/nvim/plugins/coc.rc.vim
+'''
