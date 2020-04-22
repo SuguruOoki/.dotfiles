@@ -11,7 +11,7 @@ if [ -z "${XDG_CACHE_HOME:-}" ]; then
 fi
 
 # Load config files
-for file in "${XDG_CONFIG_HOME}"/zsh/init/*.zsh; do
+for file in "${DOTPATH}"/zsh/init/*.zsh; do
     . "$file"
 done
 
