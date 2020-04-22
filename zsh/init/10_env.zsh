@@ -6,7 +6,7 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
 
 if is_osx; then
-    export PATH=$PATH:/usr/local/bin:/bin
+    export PATH=/usr/local/bin:/bin:$PATH
 fi
 
 # anyenv settings
