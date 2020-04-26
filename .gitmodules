@@ -1,3 +1,6 @@
 [submodule "wakatime-zsh-plugin"]
 	path = wakatime-zsh-plugin
 	url = https://github.com/sobolevn/wakatime-zsh-plugin.git
+[submodule "neovim-dotfiles"]
+	path = neovim-dotfiles
+	url = https://github.com/SuguruOoki/neovim-dotfiles.git
