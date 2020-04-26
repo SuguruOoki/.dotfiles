@@ -1,3 +1,0 @@
-setlocal nonumber
-
-wincmd J
