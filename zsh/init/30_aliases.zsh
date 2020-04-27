@@ -49,6 +49,7 @@ if has 'nvim'; then
 fi
 
 if has 'git'; then
+    alias g='git'
     alias ga='git add'
     alias gaa='git add -A'
     alias gc='git commit'
