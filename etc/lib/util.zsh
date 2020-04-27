@@ -319,7 +319,11 @@ install() {
                 brew install "$@"
             else
                 log_fail "ERROR: Require homebrew!"
-                return 1
+                log_echo "start to install Homebrew..."
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+                log_echo "Installed Homebrew"
+                log_echo "Installing ${@} with Homebrew..."
+                brew install "$@"
             fi
             ;;
         linux)
