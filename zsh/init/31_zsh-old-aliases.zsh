@@ -482,8 +482,9 @@ alias gs=gitswitch
 
 function gitswitch() {
   local current_branch=$(git branch | grep \* | sed 's/ //g' | sed 's/*//g')
-  local next_branch=$(git branch | sed -e "/*/d" | peco)
-  git switch $next_branch
+  git fetch --all
+  local next_branch=$(git branch --all | sed -e "/*/d" | sed -e 's/remotes\///g' | peco)
+  git switch -c $next_branch
   if [ -e "composer.json" -a ${current_branch}!=${next_branch} ]; then
     echo 'composer, laravel cache clear execute...'
     composer dump-autoload && php artisan cache:clear && php artisan config:clear && php artisan view:clear && php artisan route:clear
