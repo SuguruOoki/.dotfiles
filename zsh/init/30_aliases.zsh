@@ -38,11 +38,11 @@ if has 'tmux'; then
     alias tmns='tmux new-session -s'
 fi
 
-if has 'vim'; then
-    alias v='nvim'
-    alias vi='nvim'
-    alias vim='nvim'
-fi
+# if has 'vim'; then
+#     alias v='nvim'
+#     alias vi='nvim'
+#     alias vim='nvim'
+# fi
 
 if has 'nvim'; then
     alias n='nvim'
