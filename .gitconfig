@@ -3,3 +3,5 @@
 	email = oki.work0527@gmail.com
 [push]
     default = current
+[init]
+	defaultBranch = main
