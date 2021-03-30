@@ -32,3 +32,5 @@ fi
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/heroku-node/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
