@@ -36,7 +36,4 @@ export PATH="/usr/local/opt/heroku-node/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 export PATH="/opt/homebrew/opt/zip/bin:$PATH"
-fpath=($HOME/.zsh/anyframe(N-/) $fpath)
-autoload -Uz anyframe-init
-anyframe-init
 export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
