@@ -5,3 +5,4 @@
     default = current
 [init]
 	defaultBranch = main
+	templateDir = /Users/suguruohki/.git-templates/git-secrets
