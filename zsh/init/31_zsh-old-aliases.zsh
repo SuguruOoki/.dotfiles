@@ -311,7 +311,7 @@ alias trans='trans -b en:ja'
 alias transj='trans -b ja:en'
 
 # .zshrcに以下追記
-fpath=($HOME/anyframe $fpath)
+fpath=($HOME/.dotfiles/anyframe $fpath)
 autoload -Uz anyframe-init
 anyframe-init
 
