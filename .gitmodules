@@ -4,3 +4,6 @@
 [submodule "neovim-dotfiles"]
 	path = neovim-dotfiles
 	url = https://github.com/SuguruOoki/neovim-dotfiles.git
+[submodule "anyframe"]
+	path = anyframe
+	url = git@github.com:mollifier/anyframe.git
