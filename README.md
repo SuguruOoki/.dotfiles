@@ -15,3 +15,4 @@ $ cd ~/.dotfiles
 $ make install
 ```
 
+Linux環境である場合は、Brewがないため注意
