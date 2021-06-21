@@ -894,3 +894,6 @@ if [ -f /Users/suguruohki/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 export PATH=/usr/local/texlive/2019/bin/x86_64-darwin:$PATH
+
+# required goenv
+eval "$(goenv init -)"
