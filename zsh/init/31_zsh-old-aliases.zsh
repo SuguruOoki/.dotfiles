@@ -896,4 +896,10 @@ fi
 export PATH=/usr/local/texlive/2019/bin/x86_64-darwin:$PATH
 
 # required goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
+Fix
+rt GOPATH="$HOME/go"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
