@@ -45,7 +45,7 @@ fi
 # fi
 
 if has 'kubectl'; then
-    alias k='kubecutl'
+    alias k='kubectl'
 fi
 
 if has 'nvim'; then
