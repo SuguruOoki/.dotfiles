@@ -44,8 +44,12 @@ fi
 #     alias vim='nvim'
 # fi
 
+if has 'kubectl'; then
+    alias k='kubecutl'
+fi
+
 if has 'nvim'; then
-    alias n='nvim'
+    alias nv='nvim'
 fi
 
 if has 'git'; then
