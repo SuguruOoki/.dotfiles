@@ -6,3 +6,9 @@
 [init]
 	defaultBranch = main
 	templateDir = /Users/suguruohki/.git-templates/git-secrets
+[pull]
+	rebase = true
+[url "git@github.com:"]
+	insteadOf = https://github.com
+[url "https://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:x-oauth-basic@github.com/"]
+	insteadOf = https://github.com/
