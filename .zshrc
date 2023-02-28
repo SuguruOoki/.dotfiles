@@ -1,8 +1,4 @@
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
 if [ -z "${DOTPATH:-}" ]; then
     DOTPATH=~/.dotfiles; export DOTPATH
 fi
@@ -41,10 +37,4 @@ export PATH="/usr/local/opt/heroku-node/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 export PATH="/opt/homebrew/opt/zip/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 export GOPRIVATE="github/SuguruOoki/"
-
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
