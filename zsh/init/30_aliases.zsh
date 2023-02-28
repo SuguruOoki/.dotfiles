@@ -76,13 +76,6 @@ if has 'hub'; then
     alias hb='hub browse'
 fi
 
-if has 'vagrant'; then
-    alias vup='vagrant up'
-    alias vsh='vagrant ssh'
-    alias vhl='vagrant halt'
-    alias vre='vagrant reload'
-fi
-
 if has 'lxterminal'; then
     alias lxterminal='lxterminal --geometry=100x35'
 fi
